@@ -1,0 +1,9 @@
+{
+  "SOC2": {
+    "CC6.1": ["check_bucket"],
+    "CC6.2": ["check_github_mfa", "check_okta_mfa"]
+  },
+  "ISO27001": {
+    "A.8.2.3": ["check_bucket"]
+  }
+}
