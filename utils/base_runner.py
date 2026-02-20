@@ -307,6 +307,8 @@ class BaseRunner:
 
     def __init__(self, config: dict):
         self.config = config
+        config["integration_name"] = self.name  # set before stages are created
+        register_tasks(self.__class__)
         self.context = ExecutionContext(config)
         self.stage_one = self.StageOne(config)
         self.stage_two = self.StageTwo(config)

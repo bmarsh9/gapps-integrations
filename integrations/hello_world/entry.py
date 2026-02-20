@@ -1,14 +1,7 @@
-from utils.task_registry import register_tasks
 from utils.base_runner import BaseRunner, TaskContext
 
 
 class Runner(BaseRunner):
-    name = "hello_world"
-
-    def __init__(self, config):
-        config["integration_name"] = self.name
-        register_tasks(self.__class__)
-        super().__init__(config)
 
     class StageOne(BaseRunner.StageOne):
         """
@@ -35,7 +28,11 @@ class Runner(BaseRunner):
         """
         Task execution phase.
 
-        This class acts as a container for dynamically registered tasks via
-        @task decorator. Tasks will be attached to this class at runtime.
+        Tasks are dynamically registered to this class at runtime via the @task
+        decorator — do not add task methods manually here.
+
+        You can override this class if you need to perform setup before tasks
+        run, but this is rarely needed. In most cases, leave this as-is and
+        put all setup logic in StageOne.
         """
         pass
