@@ -6,6 +6,7 @@ from config import Config
 import requests
 from urllib.parse import urljoin
 from utils.insight_registry import InsightControlRegistry
+from utils.task_registry import register_tasks
 
 
 class TaskContext:
