@@ -14,5 +14,12 @@
         }
       }
     }
+  },
+  {
+    "name": "maintenance",
+    "title": "Maintenance",
+    "description": "Perform background maintenance tasks",
+    "enabled": true,
+    "schema": {}
   }
 ]
