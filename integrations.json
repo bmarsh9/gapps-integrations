@@ -3,6 +3,7 @@
     "name": "hello_world",
     "title": "Hello World",
     "description": "A sample integration",
+    "schedule": "0/1 * * * *",
     "enabled": true,
     "schema": {
       "type": "object",
@@ -19,6 +20,7 @@
     "name": "maintenance",
     "title": "Maintenance",
     "description": "Perform background maintenance tasks",
+    "schedule": "0/10 * * * *",
     "enabled": true,
     "schema": {}
   }
