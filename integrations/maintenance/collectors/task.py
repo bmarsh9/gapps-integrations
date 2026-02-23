@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 )
 def delete_old_jobs(self, ctx: TaskContext):
     ctx.add_log("Deleting jobs older than 14 days")
-    url = ctx.config.get("INTEGRATIONS_BASE_URL")
+    url = ctx.config.get("api_server")
     cutoff = datetime.utcnow() - timedelta(days=14)
     response = requests.delete(
         urljoin(url, "/jobs"),
