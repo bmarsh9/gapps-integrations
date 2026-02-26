@@ -5,6 +5,7 @@
     "description": "A sample integration",
     "schedule": "0/1 * * * *",
     "enabled": true,
+    "is_service": false,
     "schema": {
       "type": "object",
       "required": ["token"],
@@ -22,6 +23,7 @@
     "description": "Perform background maintenance tasks",
     "schedule": "0/10 * * * *",
     "enabled": true,
+    "is_service": true,
     "schema": {}
   }
 ]
